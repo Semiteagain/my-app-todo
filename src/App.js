@@ -14,7 +14,13 @@ function App() {
      return [...prevList, newlist]
    })
  }
-
+ function deleteList(id) {
+   setLists(prevList =>{
+     return prevList.filter((newlist, index) =>{
+       return index !== id
+     })
+   })
+ }
  
 
   return (
@@ -29,6 +35,8 @@ function App() {
         id = {index}
         title = {addNewList.title}
         content = {addNewList.content}
+        onDelete = {deleteList}
+
 
         />
       })}
