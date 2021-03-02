@@ -23,6 +23,10 @@ import React, { useState } from 'react'
 
     function submitList(e) {
       props.onAdd(list);
+      setlList({
+          title : '',
+          content : ''
+      })
 
         e.preventDefault();
     }
